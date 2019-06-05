@@ -64,12 +64,26 @@ gulp.task('build', function() {
     .pipe(gulp.dest('docs/css'))
 });
 
+gulp.task('build', function() {
+  return gulp.src('./src/scss/app.scss')
+    .pipe(plumber({errorHandler: onError}))
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions))
+    .pipe(prefix(prefixerOptions))
+    .pipe(rename('upsum.css'))
+    .pipe(gulp.dest('docs/css'))
+    .pipe(cssmin())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('docs/css'))
+});
+
 gulp.task('ejs', function(){
   gulp.src("./src/html/*.ejs")
   .pipe(ejs())
-  .pipe(rename({ extname: '-0154EF02F0A1433D9F692616DB52E82A92244820824A0C194F4C9A0E2E547982885496C6372B0570D9DA282152CAE00C5E1B6681E6B0DCCDBD407CFFD56A4DED.html' }))
+  .pipe(rename({ extname: '.html' }))
   .pipe(gulp.dest("./docs"))
 });
+
 
 gulp.task('sass-lint', function() {
   gulp.src(['./src/scss/**/*.scss', 'src/scss/*.scss'])

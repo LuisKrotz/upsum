@@ -1,0 +1,103 @@
+<html!>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TRANSA UPSUM | QRCODE</title>
+        <link rel="stylesheet" type="text/css" href="./vendor/css/sonata.min.css">
+
+        <style>
+            canvas, img {
+                width: calc(100% - 20px);
+                height: auto;
+                object-fit: contain;
+                object-position: center center;
+                left: 10px;
+                top: 10px;
+                position: absolute;
+            }
+
+            @media screen and (max-width: 768px) {
+                canvas, img {
+                    position: relative;
+                }
+            }
+
+            @media print {
+                #codes, #inputs {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <select id="codes">
+                <option value="0">Amount of QRCodes to Create</option>
+                <%
+                    var option = function (i) {
+                        return '<option value="' + i + '">' + i +'</option>';
+                    } 
+
+                    for(var i = 1; i <= 72; i++) { %>
+                        <%- option(i) %>
+                <% } %>
+        </select>
+
+        <div id="inputs"></div>
+
+        <div>
+            <%
+                var html = function (x, y, i) {
+                    return '<div class="_x' + x + ' _y' + y + '">'+
+                            '    <div class="_con">'+
+                            '        <div class="qrcodes" id="generate-' + i + '"></div>'+
+                            '   </div>'+
+                            '</div>';
+                }
+            %>
+            <section class="_6x12">
+                <%
+                    var i = 0;
+                    for(var y = 1; y <= 6; y++)
+                        for(var x = 1; x <= 12; x++) { %>
+                            <%- html(x, y, i++) %>
+                    <% }%>
+            </section>
+        </div>
+
+        <script type="text/javascript" src="./vendor/js/qrcode.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            var inputs = $('#inputs');
+
+            $('#codes').on('change', function() {
+                var selected = $(this).val();
+
+                $('.qrcodes').html('');
+
+                inputs.html('<div>');
+                for(var i = 0; i < selected; i++) 
+                    inputs.append('<input class="urls" type="text"/>');
+                inputs.append('<button id="generate" type="submit">Generate QRCode(s)</button></div>');
+
+                $('#generate').on('click', function() {
+                    var inputs = $('.urls');
+
+                    $.each(inputs, function(i, val) {
+                        var value = $(this).val();
+
+                        if (value === '') {
+                            return
+                        } else {
+                            console.log(val)
+                            for(var i = 0; i < selected; i++)
+                                new QRCode(document.getElementById('generate-' + i ), value);
+                        };
+                    });
+                });
+            });
+
+            // new QRCode(document.getElementById("machines-"), "");
+        </script>
+
+    </body>
+</html>

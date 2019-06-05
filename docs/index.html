@@ -1,0 +1,371 @@
+<html!>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TRANSA UPSUM | QRCODE</title>
+        <link rel="stylesheet" type="text/css" href="./vendor/css/sonata.min.css">
+
+        <style>
+            canvas, img {
+                width: calc(100% - 20px);
+                height: auto;
+                object-fit: contain;
+                object-position: center center;
+                left: 10px;
+                top: 10px;
+                position: absolute;
+            }
+
+            @media screen and (max-width: 768px) {
+                canvas, img {
+                    position: relative;
+                }
+            }
+
+            @media print {
+                #codes, #inputs {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <select id="codes">
+                <option value="0">Amount of QRCodes to Create</option>
+                
+                        <option value="1">1</option>
+                
+                        <option value="2">2</option>
+                
+                        <option value="3">3</option>
+                
+                        <option value="4">4</option>
+                
+                        <option value="5">5</option>
+                
+                        <option value="6">6</option>
+                
+                        <option value="7">7</option>
+                
+                        <option value="8">8</option>
+                
+                        <option value="9">9</option>
+                
+                        <option value="10">10</option>
+                
+                        <option value="11">11</option>
+                
+                        <option value="12">12</option>
+                
+                        <option value="13">13</option>
+                
+                        <option value="14">14</option>
+                
+                        <option value="15">15</option>
+                
+                        <option value="16">16</option>
+                
+                        <option value="17">17</option>
+                
+                        <option value="18">18</option>
+                
+                        <option value="19">19</option>
+                
+                        <option value="20">20</option>
+                
+                        <option value="21">21</option>
+                
+                        <option value="22">22</option>
+                
+                        <option value="23">23</option>
+                
+                        <option value="24">24</option>
+                
+                        <option value="25">25</option>
+                
+                        <option value="26">26</option>
+                
+                        <option value="27">27</option>
+                
+                        <option value="28">28</option>
+                
+                        <option value="29">29</option>
+                
+                        <option value="30">30</option>
+                
+                        <option value="31">31</option>
+                
+                        <option value="32">32</option>
+                
+                        <option value="33">33</option>
+                
+                        <option value="34">34</option>
+                
+                        <option value="35">35</option>
+                
+                        <option value="36">36</option>
+                
+                        <option value="37">37</option>
+                
+                        <option value="38">38</option>
+                
+                        <option value="39">39</option>
+                
+                        <option value="40">40</option>
+                
+                        <option value="41">41</option>
+                
+                        <option value="42">42</option>
+                
+                        <option value="43">43</option>
+                
+                        <option value="44">44</option>
+                
+                        <option value="45">45</option>
+                
+                        <option value="46">46</option>
+                
+                        <option value="47">47</option>
+                
+                        <option value="48">48</option>
+                
+                        <option value="49">49</option>
+                
+                        <option value="50">50</option>
+                
+                        <option value="51">51</option>
+                
+                        <option value="52">52</option>
+                
+                        <option value="53">53</option>
+                
+                        <option value="54">54</option>
+                
+                        <option value="55">55</option>
+                
+                        <option value="56">56</option>
+                
+                        <option value="57">57</option>
+                
+                        <option value="58">58</option>
+                
+                        <option value="59">59</option>
+                
+                        <option value="60">60</option>
+                
+                        <option value="61">61</option>
+                
+                        <option value="62">62</option>
+                
+                        <option value="63">63</option>
+                
+                        <option value="64">64</option>
+                
+                        <option value="65">65</option>
+                
+                        <option value="66">66</option>
+                
+                        <option value="67">67</option>
+                
+                        <option value="68">68</option>
+                
+                        <option value="69">69</option>
+                
+                        <option value="70">70</option>
+                
+                        <option value="71">71</option>
+                
+                        <option value="72">72</option>
+                
+        </select>
+
+        <div id="inputs"></div>
+
+        <div>
+            
+            <section class="_6x12">
+                
+                            <div class="_x1 _y1">    <div class="_con">        <div class="qrcodes" id="generate-0"></div>   </div></div>
+                    
+                            <div class="_x2 _y1">    <div class="_con">        <div class="qrcodes" id="generate-1"></div>   </div></div>
+                    
+                            <div class="_x3 _y1">    <div class="_con">        <div class="qrcodes" id="generate-2"></div>   </div></div>
+                    
+                            <div class="_x4 _y1">    <div class="_con">        <div class="qrcodes" id="generate-3"></div>   </div></div>
+                    
+                            <div class="_x5 _y1">    <div class="_con">        <div class="qrcodes" id="generate-4"></div>   </div></div>
+                    
+                            <div class="_x6 _y1">    <div class="_con">        <div class="qrcodes" id="generate-5"></div>   </div></div>
+                    
+                            <div class="_x7 _y1">    <div class="_con">        <div class="qrcodes" id="generate-6"></div>   </div></div>
+                    
+                            <div class="_x8 _y1">    <div class="_con">        <div class="qrcodes" id="generate-7"></div>   </div></div>
+                    
+                            <div class="_x9 _y1">    <div class="_con">        <div class="qrcodes" id="generate-8"></div>   </div></div>
+                    
+                            <div class="_x10 _y1">    <div class="_con">        <div class="qrcodes" id="generate-9"></div>   </div></div>
+                    
+                            <div class="_x11 _y1">    <div class="_con">        <div class="qrcodes" id="generate-10"></div>   </div></div>
+                    
+                            <div class="_x12 _y1">    <div class="_con">        <div class="qrcodes" id="generate-11"></div>   </div></div>
+                    
+                            <div class="_x1 _y2">    <div class="_con">        <div class="qrcodes" id="generate-12"></div>   </div></div>
+                    
+                            <div class="_x2 _y2">    <div class="_con">        <div class="qrcodes" id="generate-13"></div>   </div></div>
+                    
+                            <div class="_x3 _y2">    <div class="_con">        <div class="qrcodes" id="generate-14"></div>   </div></div>
+                    
+                            <div class="_x4 _y2">    <div class="_con">        <div class="qrcodes" id="generate-15"></div>   </div></div>
+                    
+                            <div class="_x5 _y2">    <div class="_con">        <div class="qrcodes" id="generate-16"></div>   </div></div>
+                    
+                            <div class="_x6 _y2">    <div class="_con">        <div class="qrcodes" id="generate-17"></div>   </div></div>
+                    
+                            <div class="_x7 _y2">    <div class="_con">        <div class="qrcodes" id="generate-18"></div>   </div></div>
+                    
+                            <div class="_x8 _y2">    <div class="_con">        <div class="qrcodes" id="generate-19"></div>   </div></div>
+                    
+                            <div class="_x9 _y2">    <div class="_con">        <div class="qrcodes" id="generate-20"></div>   </div></div>
+                    
+                            <div class="_x10 _y2">    <div class="_con">        <div class="qrcodes" id="generate-21"></div>   </div></div>
+                    
+                            <div class="_x11 _y2">    <div class="_con">        <div class="qrcodes" id="generate-22"></div>   </div></div>
+                    
+                            <div class="_x12 _y2">    <div class="_con">        <div class="qrcodes" id="generate-23"></div>   </div></div>
+                    
+                            <div class="_x1 _y3">    <div class="_con">        <div class="qrcodes" id="generate-24"></div>   </div></div>
+                    
+                            <div class="_x2 _y3">    <div class="_con">        <div class="qrcodes" id="generate-25"></div>   </div></div>
+                    
+                            <div class="_x3 _y3">    <div class="_con">        <div class="qrcodes" id="generate-26"></div>   </div></div>
+                    
+                            <div class="_x4 _y3">    <div class="_con">        <div class="qrcodes" id="generate-27"></div>   </div></div>
+                    
+                            <div class="_x5 _y3">    <div class="_con">        <div class="qrcodes" id="generate-28"></div>   </div></div>
+                    
+                            <div class="_x6 _y3">    <div class="_con">        <div class="qrcodes" id="generate-29"></div>   </div></div>
+                    
+                            <div class="_x7 _y3">    <div class="_con">        <div class="qrcodes" id="generate-30"></div>   </div></div>
+                    
+                            <div class="_x8 _y3">    <div class="_con">        <div class="qrcodes" id="generate-31"></div>   </div></div>
+                    
+                            <div class="_x9 _y3">    <div class="_con">        <div class="qrcodes" id="generate-32"></div>   </div></div>
+                    
+                            <div class="_x10 _y3">    <div class="_con">        <div class="qrcodes" id="generate-33"></div>   </div></div>
+                    
+                            <div class="_x11 _y3">    <div class="_con">        <div class="qrcodes" id="generate-34"></div>   </div></div>
+                    
+                            <div class="_x12 _y3">    <div class="_con">        <div class="qrcodes" id="generate-35"></div>   </div></div>
+                    
+                            <div class="_x1 _y4">    <div class="_con">        <div class="qrcodes" id="generate-36"></div>   </div></div>
+                    
+                            <div class="_x2 _y4">    <div class="_con">        <div class="qrcodes" id="generate-37"></div>   </div></div>
+                    
+                            <div class="_x3 _y4">    <div class="_con">        <div class="qrcodes" id="generate-38"></div>   </div></div>
+                    
+                            <div class="_x4 _y4">    <div class="_con">        <div class="qrcodes" id="generate-39"></div>   </div></div>
+                    
+                            <div class="_x5 _y4">    <div class="_con">        <div class="qrcodes" id="generate-40"></div>   </div></div>
+                    
+                            <div class="_x6 _y4">    <div class="_con">        <div class="qrcodes" id="generate-41"></div>   </div></div>
+                    
+                            <div class="_x7 _y4">    <div class="_con">        <div class="qrcodes" id="generate-42"></div>   </div></div>
+                    
+                            <div class="_x8 _y4">    <div class="_con">        <div class="qrcodes" id="generate-43"></div>   </div></div>
+                    
+                            <div class="_x9 _y4">    <div class="_con">        <div class="qrcodes" id="generate-44"></div>   </div></div>
+                    
+                            <div class="_x10 _y4">    <div class="_con">        <div class="qrcodes" id="generate-45"></div>   </div></div>
+                    
+                            <div class="_x11 _y4">    <div class="_con">        <div class="qrcodes" id="generate-46"></div>   </div></div>
+                    
+                            <div class="_x12 _y4">    <div class="_con">        <div class="qrcodes" id="generate-47"></div>   </div></div>
+                    
+                            <div class="_x1 _y5">    <div class="_con">        <div class="qrcodes" id="generate-48"></div>   </div></div>
+                    
+                            <div class="_x2 _y5">    <div class="_con">        <div class="qrcodes" id="generate-49"></div>   </div></div>
+                    
+                            <div class="_x3 _y5">    <div class="_con">        <div class="qrcodes" id="generate-50"></div>   </div></div>
+                    
+                            <div class="_x4 _y5">    <div class="_con">        <div class="qrcodes" id="generate-51"></div>   </div></div>
+                    
+                            <div class="_x5 _y5">    <div class="_con">        <div class="qrcodes" id="generate-52"></div>   </div></div>
+                    
+                            <div class="_x6 _y5">    <div class="_con">        <div class="qrcodes" id="generate-53"></div>   </div></div>
+                    
+                            <div class="_x7 _y5">    <div class="_con">        <div class="qrcodes" id="generate-54"></div>   </div></div>
+                    
+                            <div class="_x8 _y5">    <div class="_con">        <div class="qrcodes" id="generate-55"></div>   </div></div>
+                    
+                            <div class="_x9 _y5">    <div class="_con">        <div class="qrcodes" id="generate-56"></div>   </div></div>
+                    
+                            <div class="_x10 _y5">    <div class="_con">        <div class="qrcodes" id="generate-57"></div>   </div></div>
+                    
+                            <div class="_x11 _y5">    <div class="_con">        <div class="qrcodes" id="generate-58"></div>   </div></div>
+                    
+                            <div class="_x12 _y5">    <div class="_con">        <div class="qrcodes" id="generate-59"></div>   </div></div>
+                    
+                            <div class="_x1 _y6">    <div class="_con">        <div class="qrcodes" id="generate-60"></div>   </div></div>
+                    
+                            <div class="_x2 _y6">    <div class="_con">        <div class="qrcodes" id="generate-61"></div>   </div></div>
+                    
+                            <div class="_x3 _y6">    <div class="_con">        <div class="qrcodes" id="generate-62"></div>   </div></div>
+                    
+                            <div class="_x4 _y6">    <div class="_con">        <div class="qrcodes" id="generate-63"></div>   </div></div>
+                    
+                            <div class="_x5 _y6">    <div class="_con">        <div class="qrcodes" id="generate-64"></div>   </div></div>
+                    
+                            <div class="_x6 _y6">    <div class="_con">        <div class="qrcodes" id="generate-65"></div>   </div></div>
+                    
+                            <div class="_x7 _y6">    <div class="_con">        <div class="qrcodes" id="generate-66"></div>   </div></div>
+                    
+                            <div class="_x8 _y6">    <div class="_con">        <div class="qrcodes" id="generate-67"></div>   </div></div>
+                    
+                            <div class="_x9 _y6">    <div class="_con">        <div class="qrcodes" id="generate-68"></div>   </div></div>
+                    
+                            <div class="_x10 _y6">    <div class="_con">        <div class="qrcodes" id="generate-69"></div>   </div></div>
+                    
+                            <div class="_x11 _y6">    <div class="_con">        <div class="qrcodes" id="generate-70"></div>   </div></div>
+                    
+                            <div class="_x12 _y6">    <div class="_con">        <div class="qrcodes" id="generate-71"></div>   </div></div>
+                    
+            </section>
+        </div>
+
+        <script type="text/javascript" src="./vendor/js/qrcode.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            var inputs = $('#inputs');
+
+            $('#codes').on('change', function() {
+                var selected = $(this).val();
+
+                $('.qrcodes').html('');
+
+                inputs.html('<div>');
+                for(var i = 0; i < selected; i++) 
+                    inputs.append('<input class="urls" type="text"/>');
+                inputs.append('<button id="generate" type="submit">Generate QRCode(s)</button></div>');
+
+                $('#generate').on('click', function() {
+                    var inputs = $('.urls');
+
+                    $.each(inputs, function(i, val) {
+                        var value = $(this).val();
+
+                        if (value === '') {
+                            return
+                        } else {
+                            console.log(val)
+                            for(var i = 0; i < selected; i++)
+                                new QRCode(document.getElementById('generate-' + i ), value);
+                        };
+                    });
+                });
+            });
+
+            // new QRCode(document.getElementById("machines-"), "");
+        </script>
+
+    </body>
+</html>

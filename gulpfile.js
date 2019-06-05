@@ -67,7 +67,7 @@ gulp.task('build', function() {
 gulp.task('ejs', function(){
   gulp.src("./src/html/*.ejs")
   .pipe(ejs())
-  .pipe(rename({ extname: '.html' }))
+  .pipe(rename({ extname: '-0154EF02F0A1433D9F692616DB52E82A92244820824A0C194F4C9A0E2E547982885496C6372B0570D9DA282152CAE00C5E1B6681E6B0DCCDBD407CFFD56A4DED.html' }))
   .pipe(gulp.dest("./docs"))
 });
 

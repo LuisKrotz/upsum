@@ -1,0 +1,126 @@
+{
+  "homepage": "https://transainc.github.io/sonata",
+  "name": "sonata",
+  "version": "0.0.1",
+  "description": "An CSS framework for easy elements position",
+  "main": "docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transainc/sonata.git"
+  },
+  "keywords": [
+    "framework",
+    "css"
+  ],
+  "author": "LuisKrotz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/transainc/sonata/issues"
+  },
+  "stylelint": {
+    "rules": {
+      "block-no-empty": true,
+      "color-no-invalid-hex": true,
+      "max-empty-lines": 2,
+      "font-family-no-duplicate-names": true,
+      "font-family-no-missing-generic-family-keyword": true,
+      "function-calc-no-unspaced-operator": true,
+      "function-linear-gradient-no-nonstandard-direction": true,
+      "keyframe-declaration-no-important": true,
+      "declaration-no-important": true,
+      "property-no-unknown": true,
+      "unit-no-unknown": true,
+      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-no-shorthand-property-overrides": true,
+      "selector-pseudo-class-no-unknown": true,
+      "selector-pseudo-element-no-unknown": true,
+      "selector-type-no-unknown": true,
+      "media-feature-name-no-unknown": true,
+      "comment-no-empty": true,
+      "no-empty-source": true,
+      "no-duplicate-selectors": true,
+      "no-extra-semicolons": true,
+      "number-max-precision": 3,
+      "shorthand-property-no-redundant-values": true,
+      "max-nesting-depth": 5,
+      "color-hex-case": "upper",
+      "font-weight-notation": "numeric",
+      "string-quotes": "single",
+      "length-zero-no-unit": true,
+      "unit-case": "lower",
+      "no-eol-whitespace": true,
+      "selector-max-specificity": "1,5,1",
+      "selector-max-id": 2,
+      "selector-max-compound-selectors": 5,
+      "selector-max-combinators": 5,
+      "selector-max-attribute": 0,
+      "property-case": "lower",
+      "function-blacklist": [
+        "width",
+        "height",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "position",
+        "display",
+        "all"
+      ],
+      "comment-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "stylelint-commands",
+            "after-comment"
+          ]
+        }
+      ],
+      "rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
+      "declaration-colon-space-after": "always",
+      "indentation": [
+        4,
+        {
+          "except": [
+            "value"
+          ],
+          "severity": "warning"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.*",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-ejs": "^3.3.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^7.0.*",
+    "node-sass": "^4.11.0",
+    "run-sequence": "^2.2.*",
+    "ejs": "^2.6.1",
+    "serve-handler": "^5.0.8",
+    "serve": "^10.1.2",
+    "stylelint": "^9.2.*"
+  },
+  "scripts": {
+    "serve": "serve"
+  }
+}

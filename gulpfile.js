@@ -79,7 +79,7 @@ gulp.task('sass-lint', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./src/html/*.ejs', './src/scss/**/*.scss', 'src/scss/*.scss'], ['prod', 'build', 'ejs']);
+  gulp.watch(['./src/html/*.ejs', './src/scss/**/*.scss', 'src/scss/*.scss'], ['build', 'ejs']);
 });
 
 // BUILD TASKS
